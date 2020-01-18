@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f66ba62e-5c4f-4729-a5fd-ac986b7c204b" name="Default Changelist" comment="" />
+    <list default="true" id="f66ba62e-5c4f-4729-a5fd-ac986b7c204b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/visualanalytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/visualanalytics.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/visualanalytics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="487">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -176,12 +178,12 @@
       <option name="presentableId" value="Default" />
       <updated>1579147146690</updated>
       <workItem from="1579147147969" duration="10691000" />
-      <workItem from="1579381884763" duration="3123000" />
+      <workItem from="1579381884763" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13814000" />
+    <option name="totallyTimeSpent" value="14026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="802" extended-state="0" />
@@ -240,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/visualanalytics.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="487">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="n#style#0;n#a#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
