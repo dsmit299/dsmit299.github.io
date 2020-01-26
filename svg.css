@@ -10,8 +10,14 @@
     font-weight:  bold;
 }
 
-.square {
-    fill: #1e99e7;
+.ellipse {
     font-size: 24pt;
     font-weight:  bold;
+}
+
+.polyline {
+    fill:white;
+    stroke:red;
+    stroke-width: 4;
+
 }
