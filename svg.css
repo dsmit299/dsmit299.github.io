@@ -9,6 +9,7 @@
 }
 
 .polyline {
+    fill: white;
     stroke:red;
     stroke-width: 4;
 }
