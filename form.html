@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<form name="test">
+
+    User Name:
+    <input type="text" name="username">
+    <div id="username_error"></div>
+    <br>
+
+    Email:
+    <input type="text" name="email">
+    <div id="email_error"></div>
+    <br>
+
+
+    Phone number:
+    <input type="text" name="phonenumber">
+    <div id="phonenumber_error"></div>
+    <br>
+
+    Enter Password:
+    <input type="password" name="password">
+    <div id="password_error"></div>
+    <br>
+
+    Confirm Password:
+    <input type="password" name="pword">
+    <div id="pword_error"></div>
+    <br>
+
+    Gender:
+    <input type="radio" name="gender" value="male" id="male"> Male
+
+    <input type="radio" name="gender" value="female" id="female"> Female
+
+    <input type="radio" name="gender" value="other" id="other"> Other
+    <div id="gender_error"></div>
+
+    <br>
+
+    Birth Day:
+    <select id="month">
+        <option label=""></option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select>
+
+    <select id="day">
+        <option label=""></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>13</option>
+        <option>14</option>
+        <option>15</option>
+        <option>16</option>
+        <option>17</option>
+        <option>18</option>
+        <option>19</option>
+        <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
+        <option>25</option>
+        <option>26</option>
+        <option>27</option>
+        <option>28</option>
+        <option>29</option>
+        <option>30</option>
+        <option>31</option>
+    </select>
+
+    <select id="year">
+        <option label=""></option>
+        <option>1990</option>
+        <option>1991</option>
+        <option>1992</option>
+        <option>1993</option>
+        <option>1994</option>
+        <option>1995</option>
+        <option>1996</option>
+        <option>1997</option>
+        <option>1998</option>
+        <option>1999</option>
+        <option>2000</option>
+        <option>2001</option>
+        <option>2002</option>
+        <option>2003</option>
+        <option>2004</option>
+        <option>2005</option>
+        <option>2006</option>
+        <option>2007</option>
+        <option>2008</option>
+        <option>2009</option>
+        <option>2010</option>
+    </select>
+    <div id="birthday_error"></div>
+    <br>
+
+
+    Favorite Music Genre:
+    <input type="checkbox" id="pop">
+    <label for="pop">Pop</label>
+
+    <input type="checkbox" id="hiphop">
+    <label for="hiphop">Hiphop</label>
+
+    <input type="checkbox" id="jazz">
+    <label for="jazz">Jazz</label>
+
+    <input type="checkbox" id="rock">
+    <label for="rock">Rock</label>
+
+    <input type="checkbox" id="classicalmusic">
+    <label for="classicalmusic">Classical Music</label>
+
+    <input type="checkbox" id="country">
+    <label for="country">Country</label>
+
+    <input type="checkbox" name="country" value="country" id="country">
+
+    <br>
+    <span id = "music_error"></span>
+
+    <br><br>
+
+    <input type="submit" onclick="validateUserName(); return false;">
+    <button onclick="clearData(this.form)">clear</button>
+
+</form>
+
+<p id="must_have"></p>
+
+</body>
+
+
+<script>
+
+    var password_holder, cpassword_holder;
+    var error_holder = 0;
+
+
+    function validateUserName() {
+
+        //var usernameRegex = /^(?=.*\d)(?=.*[a-z]).{4,12}$/;
+        var number_regex = /\d/;
+        var lowercase_regex = /[a-z]/;
+        var errorMessage = "a valid user name";
+        var username = "Username";
+        var username_entry = document.test.username.value;
+        var x = false;
+        var flag = false;
+        var flag_one = false;
+
+        for (i = 0; i < username_entry.length; i++) {
+            if (isNaN(username_entry.charAt(i))) {
+                if (username_entry.charAt(i) === username_entry.charAt(i).toUpperCase()) {
+                    x = true;
+                    break;
+                }
+            }
+        }
+
+        if (username_entry == null || username_entry == '') {
+            flag_one = true;
+
+        } else if (number_regex.test(username_entry) == false) {
+            flag = true;
+
+        } else if (lowercase_regex.test(username_entry) == false) {
+            flag = true;
+
+        } else if (username_entry.length < 4 || username_entry.length > 12) {
+            flag = true;
+
+        } else if (x) {
+            flag = true;
+        }
+
+        if (flag) {
+            document.getElementById('username_error').innerHTML = "Please enter " + errorMessage.fontcolor("orange");
+            error_holder ++;
+
+        } else if (flag_one) {
+            document.getElementById('username_error').innerHTML = "Please Enter " + username.fontcolor("red");
+            error_holder ++;
+
+        }
+
+        validateEmail()
+        return false;
+    }
+
+
+    function validateEmail() {
+
+        var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var email_entry = document.test.email.value;
+        var ending = email_entry.split(".").pop();
+        var array = ["com", "net", "org", "edu"];
+        var errorMessage = "a valid email address";
+        var email = "Email";
+        var flag = false;
+        var flag_one = false;
+
+
+        if (email_entry == null || email_entry == '') {
+            flag_one = true;
+
+        } else if (regex.test(email_entry) == false) {
+            flag = true;
+        } else if (!array.includes(ending)) {
+            flag = true;
+        }
+
+        if (flag) {
+            document.getElementById('email_error').innerHTML = "Please enter " + errorMessage.fontcolor("orange");
+            error_holder ++;
+
+
+        } else if (flag_one) {
+            document.getElementById('email_error').innerHTML = "Please Enter " + email.fontcolor("red");
+            error_holder ++;
+        }
+
+        validatePhoneNumber()
+        return false;
+    }
+
+    function validatePhoneNumber() {
+
+        var regex = /^(\([0-9]{3}\)|[0-9]{3}-)[0-9]{3}-[0-9]{4}$/;
+        var phone_entry = document.test.phonenumber.value;
+        var errorMessage = "a valid phone number";
+        var phone = "Phone Number";
+        var flag = false;
+        var flag_one = false;
+
+        if (phone_entry == null || phone_entry == '') {
+            flag_one = true;
+
+        } else if (regex.test(phone_entry) == false) {
+            flag = true;
+        }
+
+        if (flag) {
+            document.getElementById('phonenumber_error').innerHTML = "Please enter " + errorMessage.fontcolor("orange");
+            error_holder ++;
+
+        } else if (flag_one) {
+            document.getElementById('phonenumber_error').innerHTML = "Please Enter " + phone.fontcolor("red");
+            error_holder ++;
+        }
+
+        validatePassword()
+        return false;
+    }
+
+    function validatePassword() {
+
+        var regex = /^(?=.{4,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
+        var password_entry = document.test.password.value;
+        password_holder = document.test.password.value;
+        var errorMessage = "a valid password";
+        var password = "Password";
+
+        var flag = false;
+        var flag_one = false;
+
+        if (password_entry == null || password_entry == '') {
+            flag_one = true;
+
+        } else if (regex.test(password_entry) == false) {
+            flag = true;
+        }
+
+        if (flag) {
+            document.getElementById('password_error').innerHTML = "Please enter " + errorMessage.fontcolor("orange");
+            error_holder ++;
+
+        } else if (flag_one) {
+            document.getElementById('password_error').innerHTML = "Please Enter " + password.fontcolor("red");
+            error_holder ++;
+        }
+
+        validate_Confirm_Password()
+        return false;
+    }
+
+    function validate_Confirm_Password() {
+
+        var regex = /^(?=.{4,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
+        var password_entry = document.test.pword.value;
+        cpassword_holder = document.test.pword.value;
+        var errorMessage = "a valid password";
+        var password = "Confirm Password";
+
+        var flag = false;
+        var flag_one = false;
+
+        if (password_entry == null || password_entry == '') {
+            flag_one = true;
+
+        } else if (regex.test(password_entry) == false) {
+            flag = true;
+
+        }
+
+        if (flag) {
+            document.getElementById('pword_error').innerHTML = "Please enter " + errorMessage.fontcolor("orange");
+            error_holder ++;
+
+        } else if (flag_one) {
+            document.getElementById('pword_error').innerHTML = "Please Enter " + password.fontcolor("red");
+            error_holder ++;
+        }
+
+        validateGender()
+        return false;
+    }
+
+
+
+    function validateGender() {
+
+        var gender = "Gender";
+        var errorMessage = "Please Select "
+        var flag = true;
+
+        if (document.getElementById('male').checked) {
+            flag = false;
+
+        } else if (document.getElementById('female').checked) {
+            flag = false;
+
+        } else if (document.getElementById('other').checked) {
+            flag = false;
+        }
+
+        if (flag) {
+            document.getElementById('gender_error').innerHTML = errorMessage + gender.fontcolor("red");
+            error_holder ++;
+        }
+
+        validateBirthday()
+        return false;
+    }
+
+    function validateBirthday() {
+        var month = document.getElementById("month");
+        var day = document.getElementById("day");
+        var year = document.getElementById("year");
+        var errorMessage = "Please Select ";
+        var birthday = "Birthday";
+        var flag = false;
+
+
+        if (month.value == "" || month.value == null) {
+            flag = true;
+
+        } else if (day.value == "" || day.value == null) {
+            flag = true;
+
+        } else if (year.value == "" || year.value == null) {
+            flag = true;
+        }
+
+        if (flag) {
+            document.getElementById('birthday_error').innerHTML = errorMessage + birthday.fontcolor("red");
+            error_holder ++;
+        }
+
+        validateMusic()
+        return false;
+    }
+
+    function validateMusic() {
+
+        var music = "Music";
+        var flag = true;
+        var pop = document.getElementById("pop");
+        var hiphop = document.getElementById("hiphop");
+        var jazz = document.getElementById("jazz");
+        var rock = document.getElementById("rock");
+        var classicalmusic = document.getElementById("classicalmusic");
+        var country = document.getElementById("country");
+
+        if (pop.checked == true || hiphop.checked == true || jazz.checked == true || rock.checked == true ||
+            classicalmusic.checked == true || country.checked == true ) {
+            flag = false;
+        }
+
+        if (flag) {
+            document.getElementById('music_error').innerHTML = "Please Select " + music.fontcolor("red");
+            error_holder ++;
+        }
+
+        checkAlertBox()
+        return false;
+    }
+
+
+    function checkAlertBox() {
+
+        if (password_holder != cpassword_holder) {
+            alert("passwords do not match");
+        } else if (error_holder === 0){
+            location.replace("https://dsmit299.github.io/")
+        }
+
+        return false;
+    }
+
+    function clearData(oForm) {
+        var elements = oForm.elements;
+        oForm.reset();
+
+        for (i = 0; i < elements.length; i++) {
+            field_type = elements[i].type.toLowerCase();
+            switch (field_type) {
+                case "text":
+                case "password":
+                case "radio":
+                case "checkbox":
+                    if (elements[i].checked) {
+                        elements[i].checked = false;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+</script>
+</html>
