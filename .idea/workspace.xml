@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jQuery_events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="125" column="80" selection-start-line="125" selection-start-column="80" selection-end-line="125" selection-end-column="80" />
+            <state relative-caret-position="202">
+              <caret line="47" column="43" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -50,6 +50,7 @@
       <find>&lt;span</find>
       <find>console</find>
       <find>append</find>
+      <find>click</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -232,12 +233,12 @@
       <workItem from="1579992503058" duration="7545000" />
       <workItem from="1581370897594" duration="1101000" />
       <workItem from="1581374236159" duration="26983000" />
-      <workItem from="1581594609925" duration="18436000" />
+      <workItem from="1581594609925" duration="18646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78557000" />
+    <option name="totallyTimeSpent" value="78767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="802" extended-state="0" />
@@ -367,8 +368,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jQuery_events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="125" column="80" selection-start-line="125" selection-start-column="80" selection-end-line="125" selection-end-column="80" />
+        <state relative-caret-position="202">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>

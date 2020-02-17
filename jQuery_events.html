@@ -12,6 +12,8 @@
         $(document).ready(function() {
 
             $("body")
+                .append('<br/>')
+                .append('<br/>')
                 .append('<span id="parent">')
                 .append('<img src="twitter.png" height="100" width="100" id="twitter"/>')
                 .append('<img src="fb.png" height="100" width="100" id="fb"/>')
@@ -31,8 +33,8 @@
                 $("#twitter").dblclick(function () {
                     OpenInNewTab("https://twitter.com/");
                 })
-                $("#twitter").click(function () {
-                    alert("You single clicked the Twitter Icon");
+                $("#twitter").contextmenu(function () {
+                    alert("You right clicked the Twitter Icon");
                 })
             });
 
@@ -42,8 +44,8 @@
                 $("#fb").dblclick(function () {
                     OpenInNewTab("https://facebook.com/");
                 })
-                $("#fb").click(function () {
-                    alert("You single clicked the FB Icon");
+                $("#fb").contextmenu(function () {
+                    alert("You right clicked the FB Icon");
                 })
             });
 
@@ -53,8 +55,8 @@
                 $("#reddit").dblclick(function () {
                     OpenInNewTab("https://reddit.com/");
                 })
-                $("#reddit").click(function () {
-                    alert("You single clicked the Reddit Icon");
+                $("#reddit").contextmenu(function () {
+                    alert("You right clicked the Reddit Icon");
                 })
             });
 
@@ -64,8 +66,8 @@
                 $("#linkedIn").dblclick(function () {
                     OpenInNewTab("https://linkedIn.com/");
                 })
-                $("#linkedIn").click(function () {
-                    alert("You single clicked the linkedIn Icon");
+                $("#linkedIn").contextmenu(function () {
+                    alert("You right clicked the linkedIn Icon");
                 })
             });
 
@@ -76,8 +78,8 @@
                 $("#instagram").dblclick(function () {
                     OpenInNewTab("https://instagram.com/");
                 })
-                $("#instagram").click(function () {
-                    alert("You single clicked the Instagram Icon");
+                $("#instagram").contextmenu(function () {
+                    alert("You right clicked the Instagram Icon");
                 })
             });
 
@@ -120,7 +122,7 @@
                 $("#div2").html("<div>Moved down on Div2</div>");
             });
 
-            $( "#div3" ).mousemove(function( event ) {
+            $( "#span" ).mousemove(function( event ) {
                 var xCoord = event.pageX;
                 var yCoord = event.pageY;
                 $("#div3").html("<div>Mouse X: " + xCoord + ", Y: " + yCoord + "</div>");
