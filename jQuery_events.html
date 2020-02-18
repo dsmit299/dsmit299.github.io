@@ -14,7 +14,9 @@
             $("body")
                 .append('<br/>')
                 .append('<br/>')
-                .append('<span id="parent">')
+                .append('<span id="parent"/>')
+                .append('<br/>')
+                .append('<br/>')
                 .append('<img src="twitter.png" height="100" width="100" id="twitter"/>')
                 .append('<img src="fb.png" height="100" width="100" id="fb"/>')
                 .append('<img src="reddit.png" height="100" width="100" id="reddit"/>')
@@ -25,62 +27,61 @@
                 .append('<div id="div1">In:</div>')
                 .append('<div id="div2">Out:</div>')
                 .append('<div id="div3">Mouse X: , Y:</div>')
-                .append('</span>')
 
             $("#twitter").mouseenter(function() {
                 $("#div1").html("<div>In: Twitter</div>");
-                $("#twitter").css({opacity: 0.5});
+                $("#twitter").css({opacity: '0.5'});
                 $("#twitter").dblclick(function () {
                     OpenInNewTab("https://twitter.com/");
-                })
+                });
                 $("#twitter").contextmenu(function () {
                     alert("You right clicked the Twitter Icon");
-                })
+                });
             });
 
             $("#fb").mouseenter(function() {
                 $("#div1").html("<div>In: FB</div>");
-                $("#fb").css({opacity: 0.5});
+                $("#fb").css({opacity: '0.5'});
                 $("#fb").dblclick(function () {
                     OpenInNewTab("https://facebook.com/");
-                })
+                });
                 $("#fb").contextmenu(function () {
                     alert("You right clicked the FB Icon");
-                })
+                });
             });
 
             $("#reddit").mouseenter(function() {
                 $("#div1").html("<div>In: Reddit</div>");
-                $("#reddit").css({opacity: 0.5});
+                $("#reddit").css({opacity: '0.5'});
                 $("#reddit").dblclick(function () {
                     OpenInNewTab("https://reddit.com/");
-                })
+                });
                 $("#reddit").contextmenu(function () {
                     alert("You right clicked the Reddit Icon");
-                })
+                });
             });
 
             $("#linkedIn").mouseenter(function() {
                 $("#div1").html("<div>In: linkedIn</div>");
-                $("#linkedIn").css({opacity: 0.5});
+                $("#linkedIn").css({opacity: '0.5'});
                 $("#linkedIn").dblclick(function () {
                     OpenInNewTab("https://linkedIn.com/");
-                })
+                });
                 $("#linkedIn").contextmenu(function () {
                     alert("You right clicked the linkedIn Icon");
-                })
+                });
             });
 
 
             $("#instagram").mouseenter(function() {
                 $("#div1").html("<div>In: Instagram</div>");
-                $("#instagram").css({opacity: 0.5});
+                $("#instagram").css({opacity: '0.5'});
                 $("#instagram").dblclick(function () {
                     OpenInNewTab("https://instagram.com/");
-                })
+                });
                 $("#instagram").contextmenu(function () {
                     alert("You right clicked the Instagram Icon");
-                })
+                });
             });
 
             /* Next Level */
@@ -88,49 +89,46 @@
 
             $("#twitter").mouseleave(function() {
                 $("#div2").html("<div>Out: Twitter</div>");
-                $(" #twitter ").css({opacity: 0.5});
+                $(" #twitter ").css({opacity: '1.0'});
             });
 
             $("#fb").mouseleave(function() {
                 $("#div2").html("<div>Out: FB</div>");
-                $("#fb").css({opacity: 0.5});
+                $("#fb").css({opacity: '1.0'});
             });
 
             $("#reddit").mouseleave(function() {
                 $("#div2").html("<div>Out: Reddit</div>");
-                $("#reddit").css({opacity: 0.5});
+                $("#reddit").css({opacity: '1.0'});
             });
 
             $("#linkedIn").mouseleave(function() {
                 $("#div2").html("<div>Out: linkedIn</div>");
-                $("#linkedIn").css({opacity: 0.5});
+                $("#linkedIn").css({opacity: '1.0'});
             });
 
             $("#instagram").mouseleave(function() {
                 $("#div2").html("<div>Out: Instagram</div>");
-                $("#instagram").css({opacity: 0.5});
+                $("#instagram").css({opacity: '1.0'});
             });
 
 
 
             $("#div1").mouseup(function() {
-                $("#div1").html("<div>Moved Up on Div1</div>");
+                $("#div1").html("<div>Mouse released on Div1</div>");
             });
 
 
             $("#div2").mousedown(function() {
-                $("#div2").html("<div>Moved down on Div2</div>");
+                $("#div2").html("<div>Mouse clicked down on Div2</div>");
             });
 
-            $( "#span" ).mousemove(function( event ) {
-                var xCoord = event.pageX;
-                var yCoord = event.pageY;
-                $("#div3").html("<div>Mouse X: " + xCoord + ", Y: " + yCoord + "</div>");
-
+            $(document).ready(function(){
+                $(document).mousemove(function(event){
+                    $("#div3").text("Mouse X: " + event.pageX + ", Y: " + event.pageY);
+                });
             });
-
         });
-
 
     </script>
 </head>

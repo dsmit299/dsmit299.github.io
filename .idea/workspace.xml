@@ -16,8 +16,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jQuery_events.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="195">
+              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2012">
+              <caret line="430" column="14" selection-start-line="430" selection-start-column="14" selection-end-line="430" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -51,6 +60,7 @@
       <find>console</find>
       <find>append</find>
       <find>click</find>
+      <find>prompt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -66,6 +76,7 @@
       <replace>$(</replace>
       <replace>&quot;)</replace>
       <replace>.html(&quot;</replace>
+      <replace>alert</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -233,12 +244,12 @@
       <workItem from="1579992503058" duration="7545000" />
       <workItem from="1581370897594" duration="1101000" />
       <workItem from="1581374236159" duration="26983000" />
-      <workItem from="1581594609925" duration="18646000" />
+      <workItem from="1581594609925" duration="23789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78767000" />
+    <option name="totallyTimeSpent" value="83910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="802" extended-state="0" />
@@ -361,15 +372,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="2012">
           <caret line="430" column="14" selection-start-line="430" selection-start-column="14" selection-end-line="430" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jQuery_events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="195">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
